@@ -116,12 +116,6 @@ def add_member(request):
 
 def search_member(request):
     if request.method == 'POST':
-        # search_form = SearchForm(request.POST)
-        # first_name = request.POST.get('search')
-        # check = Member.objects.filter(first_name__contains=first_name)
-        # check = serializers.serialize('json', check)
-        # context = {}
-        # context['search'] = check
         if 'clear' in request.POST:
             return redirect('view_member')
         search_form = SearchForm(request.POST)

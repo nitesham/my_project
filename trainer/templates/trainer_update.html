@@ -113,3 +113,15 @@
     </div>
 </div>
 {% endblock %}
+
+{% block javascript %}
+<script>
+function goBack() {
+    window.history.back();
+}
+
+$(window).on('load', function(){
+  $('#modal').modal('show');
+});
+</script>
+{% endblock %}
